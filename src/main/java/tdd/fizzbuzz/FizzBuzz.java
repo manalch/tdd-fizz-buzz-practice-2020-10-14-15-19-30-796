@@ -7,6 +7,9 @@ public class FizzBuzz {
     private static final int MODULO_7 = 7;
 
     public String countOff(int orderNumber) {
+        if (orderNumber % MODULO_3 == 0) {
+            return "Fizz";
+        }
         return orderNumber % MODULO_3 == 0
                 || orderNumber % MODULO_5 == 0
                 || orderNumber % MODULO_7 == 0
