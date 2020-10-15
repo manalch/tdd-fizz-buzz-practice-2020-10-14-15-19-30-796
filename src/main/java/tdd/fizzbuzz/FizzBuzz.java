@@ -3,9 +3,11 @@ package tdd.fizzbuzz;
 public class FizzBuzz {
 
     private static final int MODULO_3 = 3;
-    private static final String FIZZ = "Fizz";
     private static final int MODULO_5 = 5;
+    private static final int MODULO_7 = 7;
+    private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
+    private static final String WHIZZ = "Whizz";
 
     public String countOff(int orderNumber) {
         if (isMultipleOfThree(orderNumber)) {
@@ -14,8 +16,8 @@ public class FizzBuzz {
         if (isMultipleOfFive(orderNumber)) {
             return BUZZ;
         }
-        if (orderNumber % 7 == 0) {
-            return "Whizz";
+        if (isMultipleOfSeven(orderNumber)) {
+            return WHIZZ;
         }
         return String.valueOf(orderNumber);
     }
@@ -26,5 +28,9 @@ public class FizzBuzz {
 
     private boolean isMultipleOfFive(int orderNumber) {
         return orderNumber % MODULO_5 == 0;
+    }
+
+    private boolean isMultipleOfSeven(int orderNumber) {
+        return orderNumber % MODULO_7 == 0;
     }
 }
