@@ -11,8 +11,11 @@ public class FizzBuzz {
         if (isMultipleOfThree(orderNumber)) {
             return FIZZ;
         }
-        if (isMultipleOfFive(orderNumber)){
+        if (isMultipleOfFive(orderNumber)) {
             return BUZZ;
+        }
+        if (orderNumber % 7 == 0) {
+            return "Whizz";
         }
         return String.valueOf(orderNumber);
     }
