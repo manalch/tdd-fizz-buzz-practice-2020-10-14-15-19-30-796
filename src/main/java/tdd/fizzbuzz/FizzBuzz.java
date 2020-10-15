@@ -10,6 +10,9 @@ public class FizzBuzz {
     private static final String WHIZZ = "Whizz";
 
     public String countOff(int orderNumber) {
+        if (isMultipleOfThree(orderNumber) && isMultipleOfFive(orderNumber)) {
+            return String.format("%s%s", FIZZ, BUZZ);
+        }
         if (isMultipleOfThree(orderNumber)) {
             return FIZZ;
         }
