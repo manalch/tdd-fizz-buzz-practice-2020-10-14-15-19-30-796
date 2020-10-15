@@ -9,6 +9,9 @@ public class FizzBuzz {
         if (isMultipleOfThree(orderNumber)) {
             return FIZZ;
         }
+        if (orderNumber % 5 == 0){
+            return "Buzz";
+        }
         return String.valueOf(orderNumber);
     }
 
