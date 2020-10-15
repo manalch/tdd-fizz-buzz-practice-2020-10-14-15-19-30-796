@@ -20,4 +20,12 @@ class FizzBuzzTest {
         String actual = fizzBuzz.countOff(orderNumber);
         assertEquals("Fizz", actual);
     }
+
+    @Test
+    void should_return_buzz_when_the_given_is_multiple_of_5() {
+        int orderNumber = 5;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String actual = fizzBuzz.countOff(orderNumber);
+        assertEquals("Buzz", actual);
+    }
 }
