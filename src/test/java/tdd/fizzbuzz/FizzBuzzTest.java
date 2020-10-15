@@ -36,4 +36,12 @@ class FizzBuzzTest {
         String actual = fizzBuzz.countOff(orderNumber);
         assertEquals("Whizz", actual);
     }
+
+    @Test
+    void should_return_fizz_buzz_when_the_given_is_multiple_of_3_and_5() {
+        int orderNumber = 15;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String actual = fizzBuzz.countOff(orderNumber);
+        assertEquals("FizzBuzz", actual);
+    }
 }
