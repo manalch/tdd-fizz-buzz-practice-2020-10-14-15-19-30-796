@@ -10,19 +10,17 @@ public class FizzBuzz {
     private static final String WHIZZ = "Whizz";
 
     public String countOff(int orderNumber) {
-        if (isMultipleOfThree(orderNumber) && isMultipleOfFive(orderNumber)) {
-            return String.format("%s%s", FIZZ, BUZZ);
-        }
+        String message = "";
         if (isMultipleOfThree(orderNumber)) {
-            return FIZZ;
+            message += FIZZ;
         }
         if (isMultipleOfFive(orderNumber)) {
-            return BUZZ;
+            message += BUZZ;
         }
         if (isMultipleOfSeven(orderNumber)) {
-            return WHIZZ;
+            message += WHIZZ;
         }
-        return String.valueOf(orderNumber);
+        return message.isEmpty() ? String.valueOf(orderNumber) : message;
     }
 
     private boolean isMultipleOfThree(int orderNumber) {
